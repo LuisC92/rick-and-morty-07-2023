@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import CharactersCard from "../CharactersCard/CharactersCard";
-import SearchBar from "../SearchBar/SearchBar";
+import CharactersCard from "../../components/CharactersCard/CharactersCard";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import axios from "axios";
 // https://rickandmortyapi.com/api/character
 const CharactersList = () => {
@@ -38,14 +38,16 @@ const CharactersList = () => {
 
   // console.log(characters);
   return (
-    <div>
+    <div className="main-container">
       CharactersList
       <SearchBar handleChange={handleChange} searchValue={searchValue} />
       {/* <button onClick={getCharacters}>Call API</button> */}
       {/* <CharactersCard characters={characters} /> */}
-      {characters.map((character) => (
-        <CharactersCard key={character.id} character={character} />
-      ))}
+      <div className="card-container">
+        {characters.map((character) => (
+          <CharactersCard key={character.id} character={character} />
+        ))}
+      </div>
     </div>
   );
 };
