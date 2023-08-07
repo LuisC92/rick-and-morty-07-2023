@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import NavBar from "./components/NavBar/NavBar";
 import CharactersDetails from "./pages/CharactersDetails/CharactersDetails";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/characters" element={<CharactersList />} />
         <Route path="/characters/:id" element={<CharactersDetails />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
