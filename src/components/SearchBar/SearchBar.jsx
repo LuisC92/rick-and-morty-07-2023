@@ -2,9 +2,10 @@
 
 const SearchBar = ({ handleChange, searchValue }) => {
   return (
-    <div>
+    <div className="searchBar">
       <label htmlFor="search">Search: </label>
       <input
+       className="searchBar-input"
         type="text"
         name="search"
         placeholder="Search for your favorite character"

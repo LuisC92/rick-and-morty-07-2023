@@ -1,12 +1,12 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import UserContext from "../../contexts/UserContext";
 
 const Login = () => {
   // const [email, setEmail] = useState()
   // const [password, setPassword] = useState()
-//   const [userLogin, setUserLogin] = useState({});
+  //   const [userLogin, setUserLogin] = useState({});
 
-const {userLogin, setUserLogin} = useContext(UserContext)
+  const { userLogin, setUserLogin } = useContext(UserContext);
 
   const handleChange = (event) => {
     // console.log("target: ", event.target)
@@ -18,31 +18,40 @@ const {userLogin, setUserLogin} = useContext(UserContext)
 
   const handleSubmit = (event, userLogin) => {
     event.preventDefault();
-    console.log(userLogin)
-  }
+    console.log(userLogin);
+  };
 
   return (
-    <div>
-      <form onSubmit={(event)=>handleSubmit(event, userLogin)}>
-        <label htmlFor="email">Email:</label>
+    <div className="content-container">
+      <form onSubmit={(event) => handleSubmit(event, userLogin)}>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <br />
+          <input
+            name="email"
+            type="email"
+            placeholder="Type your email here"
+            onChange={handleChange}
+          />
+        </div>
         <br />
-        <input
-          name="email"
-          type="email"
-          placeholder="Type your email here"
-          onChange={handleChange}
-        />
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <br />
+          <input
+            name="password"
+            type="password"
+            placeholder="Type your password here"
+            onChange={handleChange}
+          />
+        </div>
+
         <br />
-        <label htmlFor="password">Password:</label>
-        <br />
-        <input
-          name="password"
-          type="password"
-          placeholder="Type your password here"
-          onChange={handleChange}
-        />
-        <br />
-        <button type="submit">Log In</button>
+        <div className="text-center">
+          <button className="btn btn-primary mt-3" type="submit">
+            Log In
+          </button>
+        </div>
       </form>
     </div>
   );

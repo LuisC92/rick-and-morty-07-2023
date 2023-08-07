@@ -20,13 +20,19 @@ const CharactersDetails = () => {
   }, []);
 
   return (
-    <div>
-      {character ? (
-        <div>
-          <h1>{character.name}</h1>
-          <img src={character.image} alt={character.name} />
-        </div>
-      ) : <p>Loading Characters....</p>}
+    <div className='content-container'>
+        {character ? (
+              <div className="card m-3">
+              <img className="card-img-top" src={character.image} alt={character.name} />
+              <div className="card-body">
+                <h5 className="card-title">Name: {character.name}</h5>
+                <p className="card-text">Status: {character.status}</p>
+                <p className="card-text">Species: {character.species}</p>
+                <p className="card-text">Location: {character.location.name}</p>
+                <p className="card-text">Origin: {character.origin.name}</p>
+              </div>
+          </div>
+        ) : <h1>.. Loading ..</h1>}
     </div>
   );
 };

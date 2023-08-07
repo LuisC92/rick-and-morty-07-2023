@@ -7,7 +7,8 @@ import CharactersContext from "../../contexts/CharactersContext";
 // https://rickandmortyapi.com/api/character
 const CharactersList = () => {
   // const [characters, setCharacters] = useState([]);
-  const {characters, searchValue, setSearchValue} = useContext(CharactersContext)
+  const { characters, searchValue, setSearchValue } =
+    useContext(CharactersContext);
 
   // const [searchValue, setSearchValue] = useState("");
 
@@ -40,15 +41,21 @@ const CharactersList = () => {
 
   // console.log(characters);
   return (
-    <div className="main-container">
-      CharactersList
-      <SearchBar handleChange={handleChange} searchValue={searchValue} />
+    <div>
+      <div className="header-container">
+      <h1>Characters List</h1>
+        <SearchBar handleChange={handleChange} searchValue={searchValue} />
+      </div>
       {/* <button onClick={getCharacters}>Call API</button> */}
       {/* <CharactersCard characters={characters} /> */}
-      <div className="card-container">
-        {characters ? characters.map((character) => (
-          <CharactersCard key={character.id} character={character} />
-        )) : <h1>..Loading..</h1>}
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center mt-5 mb-5">
+        {characters ? (
+          characters.map((character) => (
+            <CharactersCard key={character.id} character={character} />
+          ))
+        ) : (
+          <h1>..Loading..</h1>
+        )}
       </div>
     </div>
   );

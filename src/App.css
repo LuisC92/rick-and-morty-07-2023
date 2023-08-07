@@ -1,4 +1,4 @@
-.main-container{
+/* .main-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,4 +17,130 @@
 .card{
     border: 1px solid #000;
     margin: 20px
-}
+} */
+
+:root {
+    --background-color: rgb(44, 44, 44);
+    --forground-color: white;
+    --title-color::#D6AD60;
+  }
+  h1{
+    margin-top: 30px;
+    color:#D6AD60;
+  }
+  
+  .container-main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content:center; */
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #F4EBD0 ;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .navbar-row-line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position: fixed;
+    /* margin-bottom:30px; */
+  
+  }
+  
+  .navbar-row-line ul{
+    width: 100%;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .navbar-row-line li{
+    margin:20px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .card a:link {
+    text-decoration: none;
+    color:var(--background-color);
+  }
+  a:link {
+    text-decoration: none;
+    color: var(--background-color);
+  }
+  .card{
+    color: #122620;
+  }
+  .card-body{
+    height: 200px;
+    background-color: #B68D40;
+  }
+  .navbar-nav a:link {
+    text-decoration: none;
+  }
+  .navbar-nav a {
+    color: var(--forground-color);
+  }
+  
+  .form-group input{
+    width: 100%;
+  }
+  
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 25%;
+    /* margin: auto; */
+    padding-top: 50px;
+    color:#D6AD60;
+  }
+  
+  .searchBar-input {
+    width: 100%;
+  }
+  
+  footer {
+    background-color: var(--background-color);
+    color: var(--forground-color);
+    flex-shrink: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .content-container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4EBD0 ;
+    height: 100vh;
+    margin-top: -70px;
+  }
+  
+  .card{
+    border-radius: 15px;
+  }
+  
+  .header-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto -20px auto;
+  }
